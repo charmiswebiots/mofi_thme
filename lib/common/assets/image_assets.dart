@@ -1,5 +1,5 @@
 class ImageAssets {
-  final logoDark = "assets/image/logodark.png";
-  final logoLight = "assets/image/logolight.png";
-  final logoIcon = "assets/image/logoiconDark.png";
+  final logoDark = "assets/images/image/logoDark.png";
+  final logoLight = "assets/images/image/logoLight.png";
+  final logoIcon = "assets/images/image/logoIconDark.png";
 }

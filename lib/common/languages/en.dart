@@ -1,7 +1,7 @@
 dynamic en = {
   "appName": 'Mofi',
   "english": 'english',
-  "general": "General",
+  "general": "GENERAL",
   "dashboards": "Dashboards",
   "defaultDashboard": "Default",
   "project": "Project",
@@ -51,7 +51,7 @@ dynamic en = {
   "socialApp": "Social App",
   "toDo": "To-Do",
   "searchResult": "Search Result",
-  "formsTable": "Forms & Table",
+  "formsTable": "FORMS & TABLE",
   "forms": "Forms",
   "formControls": "Form Controls",
   "formWidget": "Form Widgets",

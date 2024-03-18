@@ -22,6 +22,8 @@ class AppTheme {
   Color dangerColor;
   Color infoColor;
   Color pinkColor;
+  Color containerColor;
+  Color white;
 
   /// Default constructor
   AppTheme(
@@ -34,6 +36,8 @@ class AppTheme {
       required this.warningColor,
       required this.dangerColor,
       required this.infoColor,
+      required this.white,
+      required this.containerColor,
       required this.pinkColor});
 
   /// fromType factory constructor
@@ -45,11 +49,14 @@ class AppTheme {
             primaryColor: const Color(0xff7A70BA),
             secondaryColor: const Color(0xff48A3D7),
             fontColor: const Color(0xff3D434A),
-            sidebarColor: const Color(0xff2A3650),//0xffF4F7F9
+            sidebarColor: const Color(0xff2A3650),
+            white: const Color(0xffFFFFFF),
+            //0xffF4F7F9
             successColor: const Color(0xff0DA759),
             warningColor: const Color(0xffD77748),
             dangerColor: const Color(0xffE44141),
             infoColor: const Color(0xff29AEF9),
+            containerColor: const Color(0xff374462),
             pinkColor: const Color(0xffC95E9E));
       case ThemeType.dark:
         return AppTheme(
@@ -60,8 +67,10 @@ class AppTheme {
             sidebarColor: const Color(0xff2A3650),
             successColor: const Color(0xff0DA759),
             warningColor: const Color(0xffD77748),
+            white: const Color(0xffFFFFFF),
             dangerColor: const Color(0xffE44141),
             infoColor: const Color(0xff29AEF9),
+            containerColor: const Color(0xff374462),
             pinkColor: const Color(0xffC95E9E));
     }
   }
