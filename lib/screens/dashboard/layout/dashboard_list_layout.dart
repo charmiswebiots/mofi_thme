@@ -32,34 +32,40 @@ class DashboardListLayout extends StatelessWidget {
               return TimelineTile(
                 nodeAlign: TimelineNodeAlign.start,
                 contents: Text(
-                  language(context, data!.subList![innerIndex].subTitle.toString()),
+                  language(
+                      context, data!.subList![innerIndex].subTitle.toString()),
                   style: appCss.dmOutfitSemiBold12
                       .textColor(appColor(context).appTheme.white)
                       .letterSpace(0.7),
                 ).paddingOnly(
-                  top: Insets.i10,
-                  bottom: Insets.i10,left: Insets.i10
-                  // Remove left padding
-                ),
+                    top: 10, bottom: 10, left: Insets.i10
+                    // Remove left padding
+                    ),
                 node: TimelineNode(
                   indicator: Row(
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         width: 20,
                         child: Divider(
                           height: 0,
                           color: Colors.blue,
                         ),
                       ),
+                      Container(
+                          width: 5,
+                          height: 5,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blue,
+                          ))
                     ],
-                  ).paddingOnly(left: 20),
+                  ).paddingOnly(left: 22),
                   startConnector: const SolidLineConnector(),
                   endConnector: const SolidLineConnector(),
                 ),
               );
             },
           )
-
         ]).paddingOnly(top: Insets.i10, left: Insets.i30, right: Insets.i30));
   }
 }
