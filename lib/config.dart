@@ -6,6 +6,7 @@ export '../common/common_path_list.dart';
 export 'package:mofi/provider/provider_path_list.dart';
 export 'package:mofi/model/model_pathlist.dart';
 export 'package:mofi/screens/screens_path_list.dart';
+export 'package:mofi/routes/index.dart';
 
 NavigationClass route = NavigationClass();
 AppArray appArray = AppArray();

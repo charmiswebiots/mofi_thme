@@ -1,6 +1,5 @@
 import 'package:mofi/config.dart';
-import 'package:mofi/routes/index.dart';
-import 'package:mofi/widget/device_format.dart';
+
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -12,15 +11,12 @@ class Dashboard extends StatelessWidget {
         child: MyMainScreen(
           children: [
             MySubScreen(
-                screenDimension:
-                    DeviceFormat().generateFormatAllDevice(1.55, 1.55, 1.55, 1.55, 1.55, 1.55, 1.55),
-                child: Container(
-                  height: MediaQuery.of(context).size.height,
-                  color: appColor(context).appTheme.sidebarColor,
-                )),
+                screenDimension: DeviceFormat().generateFormatAllDevice(
+                    1.55, 1.55, 1.55, 1.55, 1.55, 1.55, 1.55),
+                child: const DashboardDrawerList()),
             MySubScreen(
-                screenDimension: DeviceFormat()
-                    .generateFormatAllDevice(10.45, 10.45, 10.45, 10.45, 10.45, 10.45, 10.45),
+                screenDimension: DeviceFormat().generateFormatAllDevice(
+                    10.45, 10.45, 10.45, 10.45, 10.45, 10.45, 10.45),
                 child: Container(
                   height: MediaQuery.of(context).size.height,
                   color: Colors.white,

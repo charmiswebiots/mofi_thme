@@ -85,25 +85,25 @@ class AppArray {
             InnerList(menuSub: appFonts.pricing)
           ]),
       SubList(subTitle: appFonts.letterBox, icon: svgAssets.iconMessage),
-      SubList(subTitle: appFonts.chat, icon: svgAssets.iconChat,innerList: [
+      SubList(subTitle: appFonts.chat, icon: svgAssets.iconChat, innerList: [
         InnerList(menuSub: appFonts.privateChat),
         InnerList(menuSub: appFonts.groupChart),
       ]),
-      SubList(subTitle: appFonts.users, icon: svgAssets.iconUser,innerList: [
+      SubList(subTitle: appFonts.users, icon: svgAssets.iconUser, innerList: [
         InnerList(menuSub: appFonts.userProfile),
         InnerList(menuSub: appFonts.userEdit),
         InnerList(menuSub: appFonts.userCard),
       ]),
-      SubList(subTitle: appFonts.bookmark,icon: svgAssets.iconBookMark),
-      SubList(subTitle: appFonts.contacts,icon: svgAssets.iconContacts),
-      SubList(subTitle: appFonts.task,icon: svgAssets.iconTickSquare),
-      SubList(subTitle: appFonts.calender,icon: svgAssets.iconCalender),
-      SubList(subTitle: appFonts.socialApp,icon: svgAssets.iconSocialApp),
-      SubList(subTitle: appFonts.toDo,icon: svgAssets.iconEditSquare),
-      SubList(subTitle: appFonts.searchResult,icon: svgAssets.iconSearch),
+      SubList(subTitle: appFonts.bookmark, icon: svgAssets.iconBookMark),
+      SubList(subTitle: appFonts.contacts, icon: svgAssets.iconContacts),
+      SubList(subTitle: appFonts.task, icon: svgAssets.iconTickSquare),
+      SubList(subTitle: appFonts.calender, icon: svgAssets.iconCalender),
+      SubList(subTitle: appFonts.socialApp, icon: svgAssets.iconSocialApp),
+      SubList(subTitle: appFonts.toDo, icon: svgAssets.iconEditSquare),
+      SubList(subTitle: appFonts.searchResult, icon: svgAssets.iconSearch),
     ]),
     DashboardModel(title: appFonts.formsTable, subList: [
-      SubList(subTitle: appFonts.forms,icon: svgAssets.iconPlus, innerList: [
+      SubList(subTitle: appFonts.forms, icon: svgAssets.iconPlus, innerList: [
         InnerList(menuSub: appFonts.formControls, subInnerList: [
           SubInnerList(subInnerListTitle: appFonts.formValidation),
           SubInnerList(subInnerListTitle: appFonts.baseInput),
@@ -127,103 +127,67 @@ class AppArray {
           SubInnerList(subInnerListTitle: appFonts.twoFactor),
         ])
       ]),
-      SubList(subTitle: appFonts.tables,icon: svgAssets.iconEdit, innerList: [
+      SubList(subTitle: appFonts.tables, icon: svgAssets.iconEdit, innerList: [
         InnerList(menuSub: appFonts.basicTable),
         InnerList(menuSub: appFonts.dataTable),
         InnerList(menuSub: appFonts.responsiveTable),
         InnerList(menuSub: appFonts.editableTable),
       ])
     ]),
-    DashboardModel(title: appFonts.applications, subList: [
-      SubList(subTitle: appFonts.project,icon: svgAssets.iconInfo, innerList: [
-        InnerList(menuSub: appFonts.projectList),
-        InnerList(menuSub: appFonts.createNew)
-      ]),
-      SubList(subTitle: appFonts.fileManager, icon: svgAssets.iconFileManager),
-      SubList(subTitle: appFonts.kanbanBoard,icon: svgAssets.iconWallet),
-      SubList(subTitle: appFonts.ecommerce,icon: svgAssets.iconBag, innerList: [
-        InnerList(menuSub: appFonts.addProduct),
-        InnerList(menuSub: appFonts.product),
-        InnerList(menuSub: appFonts.productPage),
-        InnerList(menuSub: appFonts.productList),
-        InnerList(menuSub: appFonts.paymentDetails),
-        InnerList(menuSub: appFonts.orderHistory),
-        InnerList(menuSub: appFonts.invoices, subInnerList: [
-          SubInnerList(subInnerListTitle: appFonts.invoicesOne),
-          SubInnerList(subInnerListTitle: appFonts.invoicesTwo),
-          SubInnerList(subInnerListTitle: appFonts.invoicesThree),
-          SubInnerList(subInnerListTitle: appFonts.invoicesFour),
-          SubInnerList(subInnerListTitle: appFonts.invoicesFive),
-          SubInnerList(subInnerListTitle: appFonts.invoicesSix),
-        ]),
-        InnerList(menuSub: appFonts.cart),
-        InnerList(menuSub: appFonts.wishList),
-        InnerList(menuSub: appFonts.checkOut),
-        InnerList(menuSub: appFonts.pricing)
-      ]),
-      SubList(subTitle: appFonts.letterBox,icon: svgAssets.iconMessage),
-      SubList(subTitle: appFonts.chat,icon: svgAssets.iconChat,innerList: [
-        InnerList(menuSub: appFonts.privateChat),
-        InnerList(menuSub: appFonts.groupChart),
-      ]),
-      SubList(subTitle: appFonts.users,icon: svgAssets.iconUser ,innerList: [
-        InnerList(menuSub: appFonts.userProfile),
-        InnerList(menuSub: appFonts.userEdit),
-        InnerList(menuSub: appFonts.userCard),
-      ]),
-      SubList(subTitle: appFonts.bookmark,icon: svgAssets.iconBookMark),
-      SubList(subTitle: appFonts.contacts,icon: svgAssets.iconContacts),
-      SubList(subTitle: appFonts.task,icon: svgAssets.iconTickSquare),
-      SubList(subTitle: appFonts.calender,icon: svgAssets.iconCalender),
-      SubList(subTitle: appFonts.socialApp,icon: svgAssets.iconSocialApp),
-      SubList(subTitle: appFonts.toDo,icon: svgAssets.iconEditSquare),
-      SubList(subTitle: appFonts.searchResult,icon: svgAssets.iconSearch),
-    ]),
     DashboardModel(title: appFonts.component, subList: [
-      SubList(subTitle: appFonts.uiKits,icon: svgAssets.iconFolder, innerList: [
-        InnerList(menuSub: appFonts.typography),
-        InnerList(menuSub: appFonts.avatars),
-        InnerList(menuSub: appFonts.helperClass),
-        InnerList(menuSub: appFonts.grid),
-        InnerList(menuSub: appFonts.tagPills),
-        InnerList(menuSub: appFonts.progress),
-        InnerList(menuSub: appFonts.modal),
-        InnerList(menuSub: appFonts.alert),
-        InnerList(menuSub: appFonts.popOver),
-        InnerList(menuSub: appFonts.tooltip),
-        InnerList(menuSub: appFonts.dropDown),
-        InnerList(menuSub: appFonts.accordion),
-        InnerList(menuSub: appFonts.tabs),
-        InnerList(menuSub: appFonts.lists)
-      ]),
-      SubList(subTitle: appFonts.bonusUI,icon: svgAssets.iconTicketStar, innerList: [
-        InnerList(menuSub: appFonts.scrollable),
-        InnerList(menuSub: appFonts.treeView),
-        InnerList(menuSub: appFonts.toast),
-        InnerList(menuSub: appFonts.rating),
-        InnerList(menuSub: appFonts.dropZone),
-        InnerList(menuSub: appFonts.tour),
-        InnerList(menuSub: appFonts.sweetAlert),
-        InnerList(menuSub: appFonts.animatedModal),
-        InnerList(menuSub: appFonts.owlCarousel),
-        InnerList(menuSub: appFonts.ribbon),
-        InnerList(menuSub: appFonts.pagination),
-        InnerList(menuSub: appFonts.breadCrumb),
-        InnerList(menuSub: appFonts.rangeSlider),
-        InnerList(menuSub: appFonts.imageCropper),
-        InnerList(menuSub: appFonts.basicCard),
-        InnerList(menuSub: appFonts.creativeCard),
-        InnerList(menuSub: appFonts.draggableCard),
-        InnerList(menuSub: appFonts.timeLine),
-      ]),
-      SubList(subTitle: appFonts.animation, icon:svgAssets.iconCategory,innerList: [
-        InnerList(menuSub: appFonts.animate),
-        InnerList(menuSub: appFonts.scrollReveal),
-        InnerList(menuSub: appFonts.aosAnimation),
-        InnerList(menuSub: appFonts.tiltAnimation),
-        InnerList(menuSub: appFonts.wowAnimation),
-      ]),
-      SubList(subTitle: appFonts.icons, icon:svgAssets.icons,innerList: [
+      SubList(
+          subTitle: appFonts.uiKits,
+          icon: svgAssets.iconFolder,
+          innerList: [
+            InnerList(menuSub: appFonts.typography),
+            InnerList(menuSub: appFonts.avatars),
+            InnerList(menuSub: appFonts.helperClass),
+            InnerList(menuSub: appFonts.grid),
+            InnerList(menuSub: appFonts.tagPills),
+            InnerList(menuSub: appFonts.progress),
+            InnerList(menuSub: appFonts.modal),
+            InnerList(menuSub: appFonts.alert),
+            InnerList(menuSub: appFonts.popOver),
+            InnerList(menuSub: appFonts.tooltip),
+            InnerList(menuSub: appFonts.dropDown),
+            InnerList(menuSub: appFonts.accordion),
+            InnerList(menuSub: appFonts.tabs),
+            InnerList(menuSub: appFonts.lists)
+          ]),
+      SubList(
+          subTitle: appFonts.bonusUI,
+          icon: svgAssets.iconTicketStar,
+          innerList: [
+            InnerList(menuSub: appFonts.scrollable),
+            InnerList(menuSub: appFonts.treeView),
+            InnerList(menuSub: appFonts.toast),
+            InnerList(menuSub: appFonts.rating),
+            InnerList(menuSub: appFonts.dropZone),
+            InnerList(menuSub: appFonts.tour),
+            InnerList(menuSub: appFonts.sweetAlert),
+            InnerList(menuSub: appFonts.animatedModal),
+            InnerList(menuSub: appFonts.owlCarousel),
+            InnerList(menuSub: appFonts.ribbon),
+            InnerList(menuSub: appFonts.pagination),
+            InnerList(menuSub: appFonts.breadCrumb),
+            InnerList(menuSub: appFonts.rangeSlider),
+            InnerList(menuSub: appFonts.imageCropper),
+            InnerList(menuSub: appFonts.basicCard),
+            InnerList(menuSub: appFonts.creativeCard),
+            InnerList(menuSub: appFonts.draggableCard),
+            InnerList(menuSub: appFonts.timeLine),
+          ]),
+      SubList(
+          subTitle: appFonts.animation,
+          icon: svgAssets.iconCategory,
+          innerList: [
+            InnerList(menuSub: appFonts.animate),
+            InnerList(menuSub: appFonts.scrollReveal),
+            InnerList(menuSub: appFonts.aosAnimation),
+            InnerList(menuSub: appFonts.tiltAnimation),
+            InnerList(menuSub: appFonts.wowAnimation),
+          ]),
+      SubList(subTitle: appFonts.icons, icon: svgAssets.icons, innerList: [
         InnerList(menuSub: appFonts.flagIcon),
         InnerList(menuSub: appFonts.fontAwesomeIcon),
         InnerList(menuSub: appFonts.icoIcon),
@@ -231,14 +195,17 @@ class AppArray {
         InnerList(menuSub: appFonts.featherIcon),
         InnerList(menuSub: appFonts.whetherIcon),
       ]),
-      SubList(subTitle: appFonts.buttons,icon: svgAssets.iconButton, innerList: [
-        InnerList(menuSub: appFonts.defaultStyle),
-        InnerList(menuSub: appFonts.flatStyle),
-        InnerList(menuSub: appFonts.edgeStyle),
-        InnerList(menuSub: appFonts.raisedStyle),
-        InnerList(menuSub: appFonts.buttonGroup),
-      ]),
-      SubList(subTitle: appFonts.chat, icon: svgAssets.iconChat,innerList: [
+      SubList(
+          subTitle: appFonts.buttons,
+          icon: svgAssets.iconButton,
+          innerList: [
+            InnerList(menuSub: appFonts.defaultStyle),
+            InnerList(menuSub: appFonts.flatStyle),
+            InnerList(menuSub: appFonts.edgeStyle),
+            InnerList(menuSub: appFonts.raisedStyle),
+            InnerList(menuSub: appFonts.buttonGroup),
+          ]),
+      SubList(subTitle: appFonts.chat, icon: svgAssets.iconChat, innerList: [
         InnerList(menuSub: appFonts.eChart),
         InnerList(menuSub: appFonts.apexChart),
         InnerList(menuSub: appFonts.googleChart),
@@ -250,6 +217,61 @@ class AppArray {
         InnerList(menuSub: appFonts.chartistChart),
         InnerList(menuSub: appFonts.peityChart),
       ]),
+    ]),
+    DashboardModel(title: appFonts.pages, subList: [
+      SubList(
+        subTitle: appFonts.landingPage,
+        icon: svgAssets.iconWallet,
+      ),
+      SubList(subTitle: appFonts.samplePage, icon: svgAssets.iconPaperPlus),
+      SubList(
+          subTitle: appFonts.internationalization, icon: svgAssets.iconPlay),
+      SubList(
+        subTitle: appFonts.starterKit,
+        icon: svgAssets.iconTicketStar,
+      ),
+      SubList(
+          subTitle: appFonts.other,
+          icon: svgAssets.iconPassword,
+          innerList: [
+            InnerList(menuSub: appFonts.errorPage, subInnerList: [
+              SubInnerList(subInnerListTitle: appFonts.errorPageOne),
+              SubInnerList(subInnerListTitle: appFonts.errorPageTwo),
+              SubInnerList(subInnerListTitle: appFonts.errorPageThree),
+              SubInnerList(subInnerListTitle: appFonts.errorPageFour),
+              SubInnerList(subInnerListTitle: appFonts.errorPageFive),
+              SubInnerList(subInnerListTitle: appFonts.errorPageSix),
+            ]),
+            InnerList(menuSub: appFonts.authentication, subInnerList: [
+              SubInnerList(subInnerListTitle: appFonts.loginSample),
+              SubInnerList(subInnerListTitle: appFonts.loginWithBGImage),
+              SubInnerList(subInnerListTitle: appFonts.loginWithImageTwo),
+              SubInnerList(subInnerListTitle: appFonts.loginWithValidation),
+              SubInnerList(subInnerListTitle: appFonts.loginWithToolTip),
+              SubInnerList(subInnerListTitle: appFonts.loginWithSweetAlert),
+              SubInnerList(subInnerListTitle: appFonts.registerSimple),
+              SubInnerList(subInnerListTitle: appFonts.registerWithBgImage),
+              SubInnerList(subInnerListTitle: appFonts.registerWithImageTwo),
+              SubInnerList(subInnerListTitle: appFonts.registerWizard),
+              SubInnerList(subInnerListTitle: appFonts.unlockUSer),
+              SubInnerList(subInnerListTitle: appFonts.forgetPassword),
+              SubInnerList(subInnerListTitle: appFonts.resetPassword),
+              SubInnerList(subInnerListTitle: appFonts.maintenance),
+            ]),
+            InnerList(menuSub: appFonts.comingSoon, subInnerList: [
+              SubInnerList(subInnerListTitle: appFonts.comingSample),
+              SubInnerList(subInnerListTitle: appFonts.comingWithBgVideo),
+              SubInnerList(subInnerListTitle: appFonts.comingWithBgImage),
+            ]),
+            InnerList(menuSub: appFonts.emailTemplates, subInnerList: [
+              SubInnerList(subInnerListTitle: appFonts.basicEmail),
+              SubInnerList(subInnerListTitle: appFonts.basicWithHeader),
+              SubInnerList(subInnerListTitle: appFonts.ecommerce),
+              SubInnerList(subInnerListTitle: appFonts.emailTemplates),
+              SubInnerList(subInnerListTitle: appFonts.eCommerceEmail),
+              SubInnerList(subInnerListTitle: appFonts.orderSuccess),
+            ]),
+          ]),
     ]),
   ];
 }
