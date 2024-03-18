@@ -1,0 +1,1 @@
+export 'package:mofi/model/dashboard_model.dart';
