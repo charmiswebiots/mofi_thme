@@ -24,6 +24,7 @@ class AppTheme {
   Color pinkColor;
   Color containerColor;
   Color white;
+  Color drawerColor;
 
   /// Default constructor
   AppTheme(
@@ -38,6 +39,7 @@ class AppTheme {
       required this.infoColor,
       required this.white,
       required this.containerColor,
+      required this.drawerColor,
       required this.pinkColor});
 
   /// fromType factory constructor
@@ -51,6 +53,7 @@ class AppTheme {
             fontColor: const Color(0xff3D434A),
             sidebarColor: const Color(0xff2A3650),
             white: const Color(0xffFFFFFF),
+            drawerColor: const Color(0xff546181),
             //0xffF4F7F9
             successColor: const Color(0xff0DA759),
             warningColor: const Color(0xffD77748),
@@ -63,6 +66,7 @@ class AppTheme {
             isDark: true,
             primaryColor: const Color(0xff7A70BA),
             secondaryColor: const Color(0xff48A3D7),
+            drawerColor: const Color(0xff546181),
             fontColor: const Color(0xff8D8D8D),
             sidebarColor: const Color(0xff2A3650),
             successColor: const Color(0xff0DA759),
