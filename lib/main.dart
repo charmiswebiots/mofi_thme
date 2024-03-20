@@ -1,8 +1,10 @@
 import 'package:mofi/plugin_list.dart';
-import 'package:mofi/screens/dashboard/dashboard_screen.dart';
+import 'package:mofi/provider/navigation_provider/navigation_provider.dart';
 import 'package:mofi/screens/layoutScreen.dart';
 import 'config.dart';
 import 'locator.dart';
+
+
 
 void main() {
   setupLocator();
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
                       create: (_) => ThemeService(snapData.data!)),
                   ChangeNotifierProvider(
                       create: (_) => LanguageProvider(snapData.data!)),
-                 // ChangeNotifierProvider(create: (_) => DashboardProvider()),
+                  ChangeNotifierProvider(create: (_) => NavigationDrawerProvider()),
 
                 ],
                 child: Consumer2<ThemeService, LanguageProvider>(
