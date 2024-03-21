@@ -12,3 +12,4 @@ export 'package:mofi/common/theme/app_theme.dart';
 export 'package:mofi/common/extension/widget_extension.dart';
 export 'package:mofi/common/assets/index.dart';
 export 'package:mofi/common/extension/text_style_extensions.dart';
+export 'package:mofi/common/extension/spacing.dart';

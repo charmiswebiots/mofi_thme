@@ -1,10 +1,8 @@
 import 'package:mofi/plugin_list.dart';
-import 'package:mofi/provider/navigation_provider/navigation_provider.dart';
+import 'package:mofi/routes/router.dart';
 import 'package:mofi/screens/layoutScreen.dart';
 import 'config.dart';
 import 'locator.dart';
-
-
 
 void main() {
   setupLocator();
@@ -27,29 +25,29 @@ class MyApp extends StatelessWidget {
                       create: (_) => ThemeService(snapData.data!)),
                   ChangeNotifierProvider(
                       create: (_) => LanguageProvider(snapData.data!)),
-                  ChangeNotifierProvider(create: (_) => NavigationDrawerProvider()),
-
+                  ChangeNotifierProvider(
+                      create: (_) => NavigationDrawerProvider()),
                 ],
                 child: Consumer2<ThemeService, LanguageProvider>(
                     builder: (context1, theme, lang, child) {
-                      return MaterialApp(
-                        title: appFonts.appName,
-                        debugShowCheckedModeBanner: false,
-                        theme: AppTheme.fromType(ThemeType.light).themeData,
-                        darkTheme: AppTheme.fromType(ThemeType.dark).themeData,
-                        locale: lang.locale,
-                        localizationsDelegates: const [
-                          AppLocalizations.delegate,
-                          AppLocalizationDelagate(),
-                          GlobalMaterialLocalizations.delegate,
-                          GlobalWidgetsLocalizations.delegate,
-                          GlobalCupertinoLocalizations.delegate
-                        ],
-                        supportedLocales: appArray.localList,
-                        themeMode: theme.theme,
-                        home: const Dashboard(),
-                      );
-                    }));
+                  return MaterialApp(
+                      title: appFonts.appName,
+                      debugShowCheckedModeBanner: false,
+                      theme: AppTheme.fromType(ThemeType.light).themeData,
+                      darkTheme: AppTheme.fromType(ThemeType.dark).themeData,
+                      locale: lang.locale,
+                      localizationsDelegates: const [
+                        AppLocalizations.delegate,
+                        AppLocalizationDelagate(),
+                        GlobalMaterialLocalizations.delegate,
+                        GlobalWidgetsLocalizations.delegate,
+                        GlobalCupertinoLocalizations.delegate
+                      ],
+                      supportedLocales: appArray.localList,
+                      themeMode: theme.theme,
+                      onGenerateRoute: generateRoute,
+                      initialRoute: "/");
+                }));
           } else {
             return MaterialApp(
                 theme: AppTheme.fromType(ThemeType.light).themeData,
@@ -61,4 +59,3 @@ class MyApp extends StatelessWidget {
         });
   }
 }
-

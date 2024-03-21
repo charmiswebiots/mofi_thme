@@ -2,6 +2,7 @@ class DashboardModel {
   String? title;
   List<SubList>? subList;
 
+
   DashboardModel({this.title, this.subList});
 
   DashboardModel.fromJson(Map<String, dynamic> json) {
@@ -27,9 +28,10 @@ class DashboardModel {
 class SubList {
   String? subTitle;
   String? icon;
+  String? route;
   List<InnerList>? innerList;
 
-  SubList({this.subTitle, this.innerList,this.icon});
+  SubList({this.subTitle, this.innerList, this.icon,this.route});
 
   SubList.fromJson(Map<String, dynamic> json) {
     subTitle = json['subTitle'];

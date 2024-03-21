@@ -6,3 +6,4 @@ export 'package:mofi/widget/responsive.dart';
 export 'package:mofi/widget/responsive_category.dart';
 export 'package:mofi/widget/main_screen_children.dart';
 export 'package:mofi/widget/device_format.dart';
+export 'package:mofi/widget/search_layout.dart';

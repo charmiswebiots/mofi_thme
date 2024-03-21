@@ -37,6 +37,7 @@ class SvgAssets {
   final iconUser = "assets/images/svg/iconUser.svg";
   final iconWallet = "assets/images/svg/iconWallet.svg";
   final iconWidget = "assets/images/svg/iconWidget.svg";
-  final iconDrawerBlack="assets/images/svg/iconDrawerBlack.svg";
+  final iconDrawerBlack = "assets/images/svg/iconDrawerBlack.svg";
   final iconDrawerWhite = "assets/images/svg/iconDrawerWhite.svg";
+  final iconArrowDown = "assets/images/svg/iconArrowDown.svg";
 }

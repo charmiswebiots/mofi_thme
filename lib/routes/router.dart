@@ -5,9 +5,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   print('generateRoute: ${settings.name}');
   switch (settings.name) {
     case DashboardRoute:
-      return _getPageRoute(const Dashboard());
+      return _getPageRoute(const DashboardScreen());
+    case ProfileRoute:
+      return _getPageRoute(const ProfileScreen());
     default:
-      return _getPageRoute(const Dashboard());
+      return _getPageRoute(const DashboardScreen());
   }
 }
 

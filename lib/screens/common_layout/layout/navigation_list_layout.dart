@@ -1,11 +1,11 @@
-import 'package:mofi/screens/dashboard/layout/navigation_drawer_list.dart';
+import 'package:mofi/screens/common_layout/layout/navigation_widget.dart';
+
 import '../../../config.dart';
 
 class DashboardListLayout extends StatelessWidget {
-  final int? index;
-  final DashboardModel? data;
+  final DashboardModel data;
 
-  const DashboardListLayout({super.key, this.index, this.data});
+  const DashboardListLayout({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +13,14 @@ class DashboardListLayout extends StatelessWidget {
       Container(
               padding: const EdgeInsets.symmetric(
                   horizontal: Insets.i10, vertical: Insets.i6),
-              decoration: BoxDecoration(
-                  color: appColor(context).appTheme.containerColor,
-                  borderRadius: BorderRadius.circular(AppRadius.r6)),
-              child: Text(language(context, data!.title.toString()),
+              decoration: NavigationWidget().decorNavContainer(context),
+              child: Text(language(context, data.title.toString()),
                   style: appCss.dmOutfitSemiBold14
                       .textColor(appColor(context).appTheme.white)
                       .letterSpace(0.4)))
           .paddingOnly(bottom: Insets.i12, top: Insets.i25),
-
-      ...data!.subList!.asMap().entries.map((e) => NavigationDrawerList(
-            data: data!.subList![e.key],
+      ...data.subList!.asMap().entries.map((e) => NavigationDrawerList(
+            data: e.value,
           ))
     ]).paddingOnly(top: Insets.i10, left: Insets.i30, right: Insets.i30);
   }

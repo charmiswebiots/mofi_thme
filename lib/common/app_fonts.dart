@@ -213,11 +213,12 @@ class AppFonts {
   final selectTwo = "Select 2";
   final switchData = "Switch";
   final typeAhead = "Type Ahead";
-  final clipboard ="Clipboard";
+  final clipboard = "Clipboard";
   final formWizard = "Form Wizard 1";
   final formWizardTwo = "Form Wizard 2";
   final twoFactor = "Two Factor";
-final profileName = "Alen Miller";
-final designation ="UI Designer";
-
+  final profileName = "Alen Miller";
+  final designation = "UI Designer";
+  final search = "Search Mofi...";
+  final dash = " / ";
 }

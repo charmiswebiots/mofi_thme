@@ -49,6 +49,10 @@ dependencies:
   get_it:
   # drawer design
   timelines: ^0.1.0
+  #icons
+  flutter_feather_icons: ^2.0.0+1
+  #animations
+  getwidget: ^4.0.0
 
 dev_dependencies:
   flutter_test:
