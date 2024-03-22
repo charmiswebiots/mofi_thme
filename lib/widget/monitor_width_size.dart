@@ -77,7 +77,7 @@ class MonitorWidthSize {
       for (var type in VisualDisplaySize.values) {
         if (item.contains(type.visualDisplayName)) {
           DisplayCategory displayType =
-          DisplayCategory.fromString(item.split("-").last);
+              DisplayCategory.fromString(item.split("-").last);
           displayDimensionMap[type] = displayType;
           break;
         }
@@ -86,8 +86,8 @@ class MonitorWidthSize {
     return getRetrieveFullScreenSize(
         displayDimensionMap, DisplayCategory.slice);
   }
-
 }
+
 extension IterableIndexed<E> on Iterable<E> {
   Iterable<T> mapIndexed<T>(T Function(int index, E item) f) sync* {
     var index = 0;

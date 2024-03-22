@@ -14,7 +14,7 @@ class MyMainScreen extends StatelessWidget {
     this.valueDistance,
   });
 
-  final double defaultDistance = Insets.i8;
+  final double defaultDistance = Insets.i35;
 
   @override
   Widget build(BuildContext context) {

@@ -1,11 +1,9 @@
-import 'package:mofi/screens/common_layout/layout/navigation_widget.dart';
-
 import '../../../config.dart';
 
-class DashboardListLayout extends StatelessWidget {
+class NavigationListLayout extends StatelessWidget {
   final DashboardModel data;
 
-  const DashboardListLayout({super.key, required this.data});
+  const NavigationListLayout({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +11,18 @@ class DashboardListLayout extends StatelessWidget {
       Container(
               padding: const EdgeInsets.symmetric(
                   horizontal: Insets.i10, vertical: Insets.i6),
+              //decoration for name display container
               decoration: NavigationWidget().decorNavContainer(context),
+              //main name display in list
               child: Text(language(context, data.title.toString()),
                   style: appCss.dmOutfitSemiBold14
                       .textColor(appColor(context).appTheme.white)
                       .letterSpace(0.4)))
           .paddingOnly(bottom: Insets.i12, top: Insets.i25),
+      //sublist layout
       ...data.subList!.asMap().entries.map((e) => NavigationDrawerList(
             data: e.value,
           ))
-    ]).paddingOnly(top: Insets.i10, left: Insets.i30, right: Insets.i30);
+    ]).paddingOnly(top: Insets.i6, left: Insets.i20, right: Insets.i20);
   }
 }

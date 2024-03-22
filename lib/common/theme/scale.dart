@@ -13,7 +13,10 @@ class Sizes {
   static const double s18 = 18 * scale;
   static const double s20 = 20 * scale;
   static const double s25 = 25 * scale;
+  static const double s28 = 28 * scale;
   static const double s30 = 30 * scale;
+  static const double s32 = 32 * scale;
+  static const double s33 = 33 * scale;
   static const double s35 = 35 * scale;
   static const double s38 = 38 * scale;
   static const double s40 = 40 * scale;
@@ -24,14 +27,12 @@ class Sizes {
   static const double s60 = 60 * scale;
   static const double s100 = 100 * scale;
   static const double s125 = 125 * scale;
-
-
 }
 
 class Insets {
   static const double scale = 1;
   static const double i0 = 0 * scale;
-  static const double i2= 2 * scale;
+  static const double i2 = 2 * scale;
   static const double i5 = 5 * scale;
   static const double i6 = 6 * scale;
   static const double i8 = 8 * scale;
@@ -43,15 +44,19 @@ class Insets {
   static const double i16 = 16 * scale;
   static const double i18 = 18 * scale;
   static const double i20 = 20 * scale;
+  static const double i22 = 22 * scale;
   static const double i25 = 25 * scale;
   static const double i30 = 30 * scale;
   static const double i35 = 35 * scale;
+  static const double i45 = 45 * scale;
+  static const double i60 = 60 * scale;
 }
 
 class AppRadius {
   static const double scale = 1;
   static const double r6 = 6 * scale;
   static const double r10 = 10 * scale;
+  static const double r17 = 17 * scale;
   static const double r25 = 25 * scale;
 }
 

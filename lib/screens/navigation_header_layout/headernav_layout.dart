@@ -12,6 +12,7 @@ class HeaderNavLayout extends StatelessWidget {
       return LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
         return Scaffold(
+          backgroundColor: appColor(context).appTheme.containerCircleColor,
             body: Row(children: [
           AnimatedContainer(
               duration: const Duration(milliseconds: 100),

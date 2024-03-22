@@ -4,8 +4,8 @@ class IconModel {
   IconData? icon;
   String? imageIcon;
   bool? isIcon;
-
-  IconModel({this.icon,this.imageIcon,this.isIcon});
+//Icon Model
+  IconModel({this.icon, this.imageIcon, this.isIcon});
 
   IconModel.fromJson(Map<String, dynamic> json) {
     icon = json['icon'];

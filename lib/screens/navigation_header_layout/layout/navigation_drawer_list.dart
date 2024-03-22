@@ -11,11 +11,14 @@ class NavigationDrawerList extends StatelessWidget {
       return InkWell(
           onTap: () => navigation.onSelectSublist(data!,context),
           child: Column(children: [
+            //sublist layout design for list
             NavigationDrawerSubList(data: data),
+            //click able in inner list call
             if (navigation.isSublistOpen && navigation.subList == data!.subTitle)
               ...data!.innerList!
                   .asMap()
                   .entries
+              //sublist in inner list call layout
                   .map((e) => NavigationDrawerSubInnerSubLayout(
                         data: e.value,
                       ))

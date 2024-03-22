@@ -6,7 +6,9 @@ class NavigationDrawerProvider with ChangeNotifier {
   bool isClickArrow = false;
   bool isInnerSublistOpen = false;
   int selectedSubIndex = -1;
-  String? subList = "Dashboard", innerSubList = "Default";
+  String? subList = "Dashboard",
+      innerSubList = "Default",
+      subInnerSubList;
   bool isHovered = false;
   String? image;
   bool _isCollapsed = false;
@@ -15,7 +17,6 @@ class NavigationDrawerProvider with ChangeNotifier {
 
   void toggleIsCollapsed() {
     _isCollapsed = !isCollapsed;
-
     notifyListeners();
   }
 
@@ -49,14 +50,11 @@ class NavigationDrawerProvider with ChangeNotifier {
         data.subTitle == appFonts.editors) {
       subList = data.subTitle;
       isSublistOpen = true;
-      //isClickArrow = true;
       notifyListeners();
     } else {
-      // isClickArrow = true;
       subList = data.subTitle;
       notifyListeners();
     }
-
     route.pushNamed(context, data.route);
     notifyListeners();
   }
@@ -75,21 +73,29 @@ class NavigationDrawerProvider with ChangeNotifier {
       isInnerSublistOpen = !isInnerSublistOpen;
       notifyListeners();
     } else {
-      //isClickArrow = true;
+      isClickArrow = true;
       innerSubList = subName;
       notifyListeners();
     }
-
     notifyListeners();
   }
 
-  //selected page list
-  onSelectedListPage(dynamic data, BuildContext context) {
-    log("data  ${data}");
-    /*if (data['subtitle'] == appFonts.createAccount){
-      route.pushNamed(context, data['route'], arg: true);
+  onSelectSubInnerSubList(subName) {
+    if (subName == appFonts.invoicesOne ||
+        subName == appFonts.invoicesThree ||
+        subName == appFonts.invoicesTwo ||
+        subName == appFonts.invoicesFour ||
+        subName == appFonts.invoicesFive ||
+        subName == appFonts.invoicesSix ||
+        subName == appFonts.formValidation ||
+        subName == appFonts.baseInput) {
+      subInnerSubList = subName;
+      isClickArrow = true;
+
     } else {
-      route.pushNamed(context, data['route']);
-    }*/
+      isClickArrow = true;
+      subInnerSubList = subName;
+    }
+    notifyListeners();
   }
 }

@@ -44,6 +44,7 @@ class AppCss {
   TextStyle dmOutfitBold50 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f50);
   TextStyle dmOutfitBold38 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f38);
   TextStyle dmOutfitBold35 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f35);
+  TextStyle dmOutfitBold30 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f30);
   TextStyle dmOutfitBold24 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f24);
   TextStyle dmOutfitBold20 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f20);
   TextStyle dmOutfitBold18 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f18);
@@ -55,6 +56,7 @@ class AppCss {
   TextStyle dmOutfitBold12 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f12);
   TextStyle dmOutfitBold10 = dmOutfit(fontWeight: bold,fontsize:FontSizes.f10);
 
+  TextStyle dmOutfitSemiBold30= dmOutfit(fontWeight: semiBold,fontsize:FontSizes.f30);
   TextStyle dmOutfitSemiBold26= dmOutfit(fontWeight: semiBold,fontsize:FontSizes.f26);
   TextStyle dmOutfitSemiBold24= dmOutfit(fontWeight: semiBold,fontsize:FontSizes.f24);
   TextStyle dmOutfitSemiBold23= dmOutfit(fontWeight: semiBold,fontsize:FontSizes.f23);
@@ -72,6 +74,7 @@ class AppCss {
 
 
   //Text Style dmOutfit medium
+  TextStyle dmOutfitMedium30 = dmOutfit(fontWeight: medium,fontsize:FontSizes.f30);
   TextStyle dmOutfitMedium28 = dmOutfit(fontWeight: medium,fontsize:FontSizes.f28);
   TextStyle dmOutfitMedium22 = dmOutfit(fontWeight: medium,fontsize:FontSizes.f22);
   TextStyle dmOutfitMedium20 = dmOutfit(fontWeight: medium,fontsize:FontSizes.f20);

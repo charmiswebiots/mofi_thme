@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mofi/screens/common_layout/headernav_layout.dart';
+import 'package:mofi/screens/navigation_header_layout/headernav_layout.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

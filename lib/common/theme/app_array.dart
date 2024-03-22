@@ -1,5 +1,4 @@
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:mofi/model/icon_model.dart';
 import 'package:mofi/routes/route_name.dart';
 
 import '../../config.dart';
@@ -13,6 +12,7 @@ class AppArray {
     const Locale('hi'),
   ];
 
+  //icon list
   List<IconModel> iconList = [
     IconModel(icon: FeatherIcons.bell, isIcon: true),
     IconModel(icon: FeatherIcons.bookmark, isIcon: true),
@@ -21,7 +21,8 @@ class AppArray {
     IconModel(imageIcon: svgAssets.iconBag, isIcon: false),
   ];
 
-  List<DashboardModel> dashboardList = [
+//Navigation drawer list
+  List<DashboardModel> navigationList = [
     DashboardModel(
       title: appFonts.general,
       subList: [

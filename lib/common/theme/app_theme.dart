@@ -24,6 +24,8 @@ class AppTheme {
   Color pinkColor;
   Color containerColor;
   Color white;
+  Color blue;
+  Color orange;
   Color containerCircleColor;
   Color textColor;
   Color drawerColor;
@@ -40,9 +42,11 @@ class AppTheme {
       required this.dangerColor,
       required this.infoColor,
       required this.white,
-        required this.textColor,
+        required this.blue,
+      required this.textColor,
+        required this.orange,
       required this.containerColor,
-        required this.containerCircleColor,
+      required this.containerCircleColor,
       required this.drawerColor,
       required this.pinkColor});
 
@@ -57,8 +61,10 @@ class AppTheme {
             fontColor: const Color(0xff3D434A),
             sidebarColor: const Color(0xff2A3650),
             white: const Color(0xffFFFFFF),
+            orange: const Color(0xffD77748),
             drawerColor: const Color(0xff546181),
             textColor: const Color(0xff3D434A),
+            blue: const Color(0xff48A3D7),
             containerCircleColor: const Color(0xffF4F7F9),
             //0xffF4F7F9
             successColor: const Color(0xff0DA759),
@@ -74,9 +80,11 @@ class AppTheme {
             secondaryColor: const Color(0xff48A3D7),
             drawerColor: const Color(0xff546181),
             fontColor: const Color(0xff8D8D8D),
+            orange: const Color(0xffD77748),
             sidebarColor: const Color(0xff2A3650),
             textColor: const Color(0xffFFFFFF),
             successColor: const Color(0xff0DA759),
+            blue: const Color(0xff48A3D7),
             containerCircleColor: const Color(0xff374462),
             warningColor: const Color(0xffD77748),
             white: const Color(0xffFFFFFF),

@@ -3,7 +3,7 @@ import '../../../plugin_list.dart';
 
 class NavigationDrawerSubList extends StatelessWidget {
   final SubList? data;
-  const NavigationDrawerSubList({super.key,  this.data});
+  const NavigationDrawerSubList({super.key, this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +11,7 @@ class NavigationDrawerSubList extends StatelessWidget {
       Row(children: [
         Container(
             padding: const EdgeInsets.symmetric(vertical: Insets.i10),
+            //sub list in icon display
             child: Transform.scale(
                 scale: 0.8,
                 child: SvgPicture.asset(data!.icon.toString(),
@@ -18,11 +19,13 @@ class NavigationDrawerSubList extends StatelessWidget {
                     colorFilter: ColorFilter.mode(
                         appColor(context).appTheme.white, BlendMode.srcIn)))),
         const HSpace(Sizes.s5),
+        //sublist name display layout
         Text(language(context, data!.subTitle.toString()),
             style: appCss.dmOutfitMedium14
                 .textColor(appColor(context).appTheme.white)
                 .letterSpace(0.5))
       ]),
+      //in inner list data that time show arrow icon display
       data!.innerList!.isNotEmpty
           ? Container(
               padding: const EdgeInsets.symmetric(vertical: Insets.i10),

@@ -1,4 +1,3 @@
-import 'package:mofi/screens/common_layout/layout/navigation_icon_list_layout.dart';
 import '../../../config.dart';
 
 class NavigationListIsCollapsed extends StatelessWidget {
@@ -28,12 +27,12 @@ class NavigationListIsCollapsed extends StatelessWidget {
           behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
           child: SingleChildScrollView(
               child: Column(children: [
-                //dashboard model list
-            ...appArray.dashboardList
+            //dashboard model list
+            ...appArray.navigationList
                 .asMap()
                 .entries
                 .map((e) => Column(children: [
-                  //sublist model list
+                      //sublist model list
                       ...e.value.subList!
                           .asMap()
                           .entries

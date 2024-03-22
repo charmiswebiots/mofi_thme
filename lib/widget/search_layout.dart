@@ -6,19 +6,18 @@ class SearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //search layout
+
     return Container(
       margin: const EdgeInsets.only(right: Insets.i10),
-      width: MediaQuery.of(context).size.width * 0.15,
+      width: MediaQuery.of(context).size.width * 0.13,
       height: Sizes.s40,
       child: TextField(
           decoration: InputDecoration(
-              hintText: appFonts.search,
-              hintStyle: TextStyle(
-                color: appColor(context).appTheme.fontColor,
-                fontSize: Sizes.s12,
-              ),
+              hintText: language(context, appFonts.search),
+              hintStyle: appCss.dmOutfitRegular14.textColor(appColor(context).appTheme.fontColor).letterSpace(0.7),
               contentPadding: const EdgeInsets.symmetric(
-                  horizontal: Insets.i12, vertical: Insets.i10),
+                  horizontal: Insets.i10, vertical: Insets.i8),
               fillColor: appColor(context).appTheme.containerCircleColor,
               filled: true,
               border: const OutlineInputBorder(

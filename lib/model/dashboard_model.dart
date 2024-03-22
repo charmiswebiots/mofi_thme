@@ -2,7 +2,7 @@ class DashboardModel {
   String? title;
   List<SubList>? subList;
 
-
+//Dashboard Model
   DashboardModel({this.title, this.subList});
 
   DashboardModel.fromJson(Map<String, dynamic> json) {
@@ -31,7 +31,8 @@ class SubList {
   String? route;
   List<InnerList>? innerList;
 
-  SubList({this.subTitle, this.innerList, this.icon,this.route});
+//subList model
+  SubList({this.subTitle, this.innerList, this.icon, this.route});
 
   SubList.fromJson(Map<String, dynamic> json) {
     subTitle = json['subTitle'];
@@ -58,6 +59,7 @@ class InnerList {
   String? menuSub;
   List<SubInnerList>? subInnerList;
 
+//inner list model
   InnerList({this.menuSub, this.subInnerList});
 
   InnerList.fromJson(Map<String, dynamic> json) {
@@ -83,6 +85,7 @@ class InnerList {
 class SubInnerList {
   String? subInnerListTitle;
 
+//sub inner list layout
   SubInnerList({this.subInnerListTitle});
 
   SubInnerList.fromJson(Map<String, dynamic> json) {

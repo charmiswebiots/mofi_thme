@@ -1,5 +1,3 @@
-import 'package:mofi/screens/common_layout/layout/navigation_widget.dart';
-
 import '../../../config.dart';
 
 class HeaderLayout extends StatelessWidget {
@@ -11,13 +9,12 @@ class HeaderLayout extends StatelessWidget {
         builder: (context1, navigation, child) {
       return Container(
           color: Colors.white,
-
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 //header in name list layout
-                const HeaderNameListLayout(),
+                const HeaderNameListLayout().paddingOnly(left: Insets.i30),
                 Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   //search view display
                   const SearchField(),
@@ -25,11 +22,14 @@ class HeaderLayout extends StatelessWidget {
                   ...appArray.iconList!
                       .asMap()
                       .entries
-                      .map((e) => NavigationWidget().headerIconLayout(context, appArray.iconList[e.key],
+                      .map((e) => NavigationWidget().headerIconLayout(
+                            context,
+                            appArray.iconList[e.key],
                           )),
                   //header profile view display
-                  const HeaderProfileLayout()
-                ]).paddingSymmetric(vertical: Insets.i18,horizontal: Insets.i30)
+                  const HeaderProfileLayout().paddingOnly(right: Insets.i10)
+                ]).paddingSymmetric(
+                    vertical: Insets.i18, horizontal: Insets.i30)
               ]));
     });
   }

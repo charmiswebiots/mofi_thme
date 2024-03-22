@@ -12,12 +12,15 @@ class NavigationDrawerSubInnerSubLayout extends StatelessWidget {
       return InkWell(
           onTap: () => navigation.onSelectInnerSubList(data!.menuSub),
           child: Column(children: [
+            //inner list layout design for display
             NavigationDrawerInnerSublistLayout(data: data),
+            //inner list in sub inner data that time call this list layout
             if (navigation.isInnerSublistOpen &&
                 navigation.innerSubList == data!.menuSub)
               ...data!.subInnerList!
                   .asMap()
                   .entries
+                  //inner in sub inner list layout call
                   .map((e) => NavigationDrawerInnerSubListLayout(data: e.value))
           ]));
     });
