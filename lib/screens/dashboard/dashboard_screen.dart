@@ -1,6 +1,8 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mofi/widget/common_button.dart';
 
 import '../../config.dart';
 
@@ -9,6 +11,14 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const colorizeColors = [
+      Color(0xff3D434A),
+      Color(0xff3D434A),
+      Colors.purple,
+      Colors.blue,
+      Colors.yellow,
+      Colors.red,
+    ];
     return Scaffold(
       backgroundColor: appColor(context).appTheme.white,
       body: HeaderNavLayout(
@@ -79,17 +89,27 @@ class DashboardScreen extends StatelessWidget {
                           Align(
                             alignment: Alignment.topLeft,
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  language(context, appFonts.goodDay),
-                                  style: appCss.dmOutfitMedium30
-                                      .textColor(
-                                          appColor(context).appTheme.fontColor)
-                                      .letterSpace(0.6),
-                                ).paddingOnly(
-                                    left: Insets.i10, top: Insets.i10),
-                                Text(
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    AnimatedTextKit(
+                                      animatedTexts: [
+                                        ColorizeAnimatedText(
+                                          language(context, appFonts.goodDay),
+                                          textStyle: appCss.dmOutfitMedium30
+                                              .textColor(appColor(context)
+                                                  .appTheme
+                                                  .fontColor)
+                                              .letterSpace(0.6),
+                                          colors: colorizeColors,
+                                        ),
+                                      ],
+                                      isRepeatingAnimation: true,
+                                    ),
+                                    Text(
                                         language(context,
                                             appFonts.goodDayDescription),
                                         maxLines: 3,
@@ -99,10 +119,18 @@ class DashboardScreen extends StatelessWidget {
                                                 .fontColor
                                                 .withOpacity(0.4))
                                             .letterSpace(0.6))
-                                    .paddingOnly(
-                                        left: Insets.i10, top: Insets.i10),
+                                  ],
+                                ),
+                                ButtonCommon(
+                                    title: appFonts.goPremium,
+                                    height: Sizes.s35,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.08)
                               ],
-                            ),
+                            ).paddingOnly(
+                                left: Insets.i10,
+                                top: Insets.i5,
+                                bottom: Insets.i10),
                           )
                         ],
                       ),

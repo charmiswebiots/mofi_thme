@@ -53,6 +53,8 @@ dependencies:
   flutter_feather_icons: ^2.0.0+1
   #animations
   getwidget: ^4.0.0
+  #text animation
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:

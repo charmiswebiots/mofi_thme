@@ -222,6 +222,6 @@ class AppFonts {
   final search = "search";
   final dash = " / ";
   final goodDay ="Good day, Lena Miller";
-  final goodDayDescription = "Welcome to the Mofi family! \nWe are delighted that you have \n visited our dashboard.";
+  final goodDayDescription = "Welcome to the Mofi family! \nWe are delighted that you have \nvisited our dashboard.";
   final goPremium ="Go Premium";
 }
