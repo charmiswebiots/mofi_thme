@@ -11,7 +11,7 @@ class NavigationIconListLayout extends StatelessWidget {
       //sublist model in icon data display
         padding: const EdgeInsets.symmetric(vertical: Insets.i10),
         child: Transform.scale(
-            scale: 0.8,
+            scale: 0.85,
             child: SvgPicture.asset(data!.icon.toString(),
                 fit: BoxFit.scaleDown,
                 colorFilter: ColorFilter.mode(

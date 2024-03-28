@@ -29,14 +29,21 @@ class SubList {
   String? subTitle;
   String? icon;
   String? route;
+  bool? isSublistOpen;
   List<InnerList>? innerList;
 
 //subList model
-  SubList({this.subTitle, this.innerList, this.icon, this.route});
+  SubList(
+      {this.subTitle,
+      this.innerList,
+      this.icon,
+      this.route,
+      this.isSublistOpen});
 
   SubList.fromJson(Map<String, dynamic> json) {
     subTitle = json['subTitle'];
     icon = json['icon'];
+    isSublistOpen = json['isSublistOpen'];
     if (json['InnerList'] != null) {
       innerList = <InnerList>[];
       json['InnerList'].forEach((v) {
@@ -48,6 +55,8 @@ class SubList {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['subTitle'] = subTitle;
+    data['icon'] = icon;
+    data['isSublistOpen'] = isSublistOpen;
     if (innerList != null) {
       data['InnerList'] = innerList!.map((v) => v.toJson()).toList();
     }

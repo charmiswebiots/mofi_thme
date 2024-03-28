@@ -38,7 +38,7 @@ class NavigationDrawerInnerSubListLayout extends StatelessWidget {
                                       data!.subInnerListTitle
                               ? appColor(context).appTheme.white
                               : appColor(context).appTheme.drawerColor))
-                  .paddingOnly(left: Sizes.s35),
+                  .paddingOnly(left: Sizes.s38),
               //line connector
               startConnector: SolidLineConnector(
                   color: appColor(context).appTheme.drawerColor),

@@ -55,6 +55,8 @@ dependencies:
   getwidget: ^4.0.0
   #text animation
   animated_text_kit: ^4.2.2
+  #chart
+  fl_chart: ^0.66.2
 
 dev_dependencies:
   flutter_test:

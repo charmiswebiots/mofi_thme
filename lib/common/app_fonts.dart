@@ -224,4 +224,7 @@ class AppFonts {
   final goodDay ="Good day, Lena Miller";
   final goodDayDescription = "Welcome to the Mofi family! \nWe are delighted that you have \nvisited our dashboard.";
   final goPremium ="Go Premium";
+  final openLeaf="Opening Of Leaflets";
+  final openLeafAmount = "\$ 12,463";
+  final openLeafAmountPercent = "+ 20.08%";
 }

@@ -22,7 +22,8 @@ class NavigationDrawerSubInnerSubLayout extends StatelessWidget {
                   .entries
                   //inner in sub inner list layout call
                   .map((e) => NavigationDrawerInnerSubListLayout(data: e.value))
-          ]));
+          ]).paddingOnly(
+               left: Insets.i20, right: Insets.i20),);
     });
   }
 }

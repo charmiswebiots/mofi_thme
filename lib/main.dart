@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
                       create: (_) => LanguageProvider(snapData.data!)),
                   ChangeNotifierProvider(
                       create: (_) => NavigationDrawerProvider()),
+                  ChangeNotifierProvider(create: (_) => DashBoardProvider())
                 ],
                 child: Consumer2<ThemeService, LanguageProvider>(
                     builder: (context1, theme, lang, child) {

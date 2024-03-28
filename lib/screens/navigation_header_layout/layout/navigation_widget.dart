@@ -37,4 +37,32 @@ class NavigationWidget {
           fit: BoxFit.scaleDown,
           colorFilter: ColorFilter.mode(
               appColor(context).appTheme.white, BlendMode.srcIn)));
+
+  ValueListenableBuilder valueListen(navigation,controller,turnsTween,context)=>ValueListenableBuilder(
+      valueListenable: navigation.isOpen,
+      builder: (context2, value, child) {
+        return MouseRegion(
+          onHover: (val) {
+            controller.forward(from: 0.0);
+            navigation.notifyListeners();
+          },
+          onExit: (exit) {
+            controller.reverse(from: 1.0);
+            navigation.notifyListeners();
+          },
+          onEnter: (enter) {
+            controller.forward(from: 0.0);
+            navigation.notifyListeners();
+          },
+          child: InkWell(onTap: ()=>navigation.toggleIsCollapsed(),
+            child: RotationTransition(
+                turns: controller.drive(turnsTween), // Here it's used
+                child: SvgPicture.asset(svgAssets.iconCategory,
+                    fit: BoxFit.scaleDown,
+                    colorFilter: ColorFilter.mode(
+                        appColor(context).appTheme.white,
+                        BlendMode.srcIn))),
+          ),
+        );
+      });
 }

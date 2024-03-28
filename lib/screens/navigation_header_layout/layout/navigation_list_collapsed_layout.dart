@@ -1,9 +1,7 @@
 import '../../../config.dart';
-import '../../../plugin_list.dart';
 
 class NavigationListCollapsedLayout extends StatefulWidget {
   const NavigationListCollapsedLayout({super.key});
-
   @override
   State<NavigationListCollapsedLayout> createState() =>
       _NavigationListCollapsedLayoutState();
@@ -12,20 +10,21 @@ class NavigationListCollapsedLayout extends StatefulWidget {
 class _NavigationListCollapsedLayoutState
     extends State<NavigationListCollapsedLayout>
     with SingleTickerProviderStateMixin {
-  bool _isForward = true;
-  late final AnimationController _controller = AnimationController(
-    duration: const Duration(milliseconds: 900),
-    vsync: this,
-  )..repeat();
+  // Animation controller
+  late final AnimationController controller;
 
-  final Tween<double> turnsTween = Tween<double>(
-    begin: 0.0,
-    end: 1.0,
-  );
+  @override
+  void initState() {
+    controller = AnimationController(
+      duration: const Duration(milliseconds: 950),
+      vsync: this,
+    );
+    super.initState();
+  }
 
   @override
   void dispose() {
-    _controller.dispose();
+    controller.dispose();
     super.dispose();
   }
 
@@ -45,23 +44,9 @@ class _NavigationListCollapsedLayoutState
               width: Sizes.s38,
               //decoration box for category icon
               decoration: NavigationWidget().decorNavContainer(context),
-              child: RotationTransition(
-                  turns: _controller.drive(turnsTween),
-                  child: InkWell(
-                      onTap: () {
-                        if (_isForward) {
-                          _controller.forward(from: 0.0);
-                          navigation.toggleIsCollapsed();
-                        } else {
-                          _controller.reverse(from: 1.0); // Reverse animation
-                        }
-                        _isForward = !_isForward; // Toggle animation direction
-                      },
-                      child: SvgPicture.asset(svgAssets.iconCategory,
-                          fit: BoxFit.scaleDown,
-                          colorFilter: ColorFilter.mode(
-                              appColor(context).appTheme.white,
-                              BlendMode.srcIn)))))
+              //mouse hover effect and animation in category icon
+              child: NavigationWidget().valueListen(
+                  navigation, controller, navigation.turnsTween, context))
         ]).paddingSymmetric(horizontal: Insets.i25, vertical: Insets.i20),
         Divider(
             height: Sizes.s1,

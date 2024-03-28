@@ -35,17 +35,19 @@ class ButtonCommon extends StatelessWidget {
         height: height ?? MediaQuery.of(context).size.height * 0.04,
         margin: EdgeInsets.symmetric(horizontal: margin!),
         decoration: BoxDecoration(
-          color: color ?? appColor(context).appTheme.primaryColor,
-          borderRadius: BorderRadius.all(
-            Radius.circular(radius ?? AppRadius.r6),
-          ),
-        ),
+            color: color ?? appColor(context).appTheme.primaryColor,
+            borderRadius: BorderRadius.all(
+              Radius.circular(radius ?? AppRadius.r6),
+            ),
+            border: Border.all(
+                color: borderColor ?? appColor(context).appTheme.primaryColor)),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text(title,
               textAlign: TextAlign.center,
               style: style ??
                   appCss.dmOutfitRegular14
-                      .textColor(appColor(context).appTheme.white).letterSpace(0.8)),
+                      .textColor(appColor(context).appTheme.white)
+                      .letterSpace(0.8)),
           if (icon != null)
             Row(children: [
               icon ?? const HSpace(Sizes.s0),

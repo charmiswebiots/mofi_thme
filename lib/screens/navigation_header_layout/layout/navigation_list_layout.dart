@@ -18,11 +18,11 @@ class NavigationListLayout extends StatelessWidget {
                   style: appCss.dmOutfitSemiBold14
                       .textColor(appColor(context).appTheme.white)
                       .letterSpace(0.4)))
-          .paddingOnly(bottom: Insets.i12, top: Insets.i25),
+          .paddingOnly(bottom: Insets.i12, top: Insets.i30,left: Insets.i20, right: Insets.i20),
       //sublist layout
       ...data.subList!.asMap().entries.map((e) => NavigationDrawerList(
-            data: e.value,
+            data: e.value,index:e.key
           ))
-    ]).paddingOnly(top: Insets.i6, left: Insets.i20, right: Insets.i20);
+    ]);
   }
 }
